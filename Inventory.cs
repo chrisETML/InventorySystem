@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace InventorySystem
 {
-    internal class Program
+    internal class Inventory
     {
-        static void Main(string[] args)
-        {
-            
-        }
+        private List<InterfaceItem> items;
     }
 }

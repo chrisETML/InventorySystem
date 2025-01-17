@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace InventorySystem
 {
-    internal class Program
+    internal interface InterfaceItem
     {
-        static void Main(string[] args)
-        {
-            
-        }
+        string Name { get; }
+        
     }
 }
