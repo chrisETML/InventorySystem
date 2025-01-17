@@ -10,7 +10,11 @@ namespace InventorySystem
     {
         static void Main(string[] args)
         {
-            
+            List<IRessouce> list = new List<IRessouce>();
+
+            list.Add(new Obj("fa"));
+
+            Console.WriteLine(list.ElementAt(0));
         }
     }
 }

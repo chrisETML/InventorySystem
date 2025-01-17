@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace InventorySystem
 {
-    internal class Inventory
+    internal interface IRessouce : IItem
     {
-        private List<IRessouce> items;
+         
+        
     }
 }

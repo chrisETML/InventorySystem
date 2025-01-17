@@ -43,8 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="InterfaceItem.cs" />
+    <Compile Include="IItem.cs" />
+    <Compile Include="IRessouce.cs" />
     <Compile Include="Inventory.cs" />
+    <Compile Include="Obj.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

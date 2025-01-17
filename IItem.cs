@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace InventorySystem
 {
-    internal interface InterfaceItem
+    internal interface IItem
     {
+        // Propriété, signature
         string Name { get; }
-        
+        string Description { get; }
+        int Prix { get; }
     }
 }
