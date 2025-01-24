@@ -1,17 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/*
+Entreprise : ETML
+Auteur : Christopher Ristic 
+Date : 17.01.2025
+Description : Classe pour tester les objets 
+*/
 
 namespace InventorySystem
 {
     internal class Obj : IRessouce
     {
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public int Prix { get; set; }
-        public Obj(string name) { Name = name; }
+        public string Name { get; private set; }
+        public string Description { get; private set; }
+        public int Prix { get; private set; }
+        public int Quantity { get; private set; }
+        public Obj(string name, int quantity) 
+        { 
+            Name = name;
+            Quantity = quantity;
+        }
 
     }
 }

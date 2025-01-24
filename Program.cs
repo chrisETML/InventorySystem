@@ -1,8 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/*
+Entreprise : ETML
+Auteur : Christopher Ristic 
+Date : 17.01.2025
+Description : Programme principale pour le système d'inventaire 
+*/
+
+using System;
 
 namespace InventorySystem
 {
@@ -10,11 +13,18 @@ namespace InventorySystem
     {
         static void Main(string[] args)
         {
-            List<IRessouce> list = new List<IRessouce>();
+            
+            var inventory = new Inventory();
 
-            list.Add(new Obj("fa"));
+            inventory.AddItem(new Obj("Potion", 10));
+            inventory.AddItem(new Obj("Sword", 1));
+            inventory.AddItem(new Obj("Shield", 2));
 
-            Console.WriteLine(list.ElementAt(0));
+            // Affichage de l'inventaire
+            inventory.DisplayInventory();
+
+            // Attente de l'utilisateur pour fermer la console
+            Console.ReadKey();
         }
     }
 }
