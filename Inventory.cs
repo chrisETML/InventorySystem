@@ -13,8 +13,10 @@ namespace InventorySystem
 {
     internal class Inventory
     {
-        private Vector2 ConsolePosition;
+        private Vector2 ConsolePosition; //Position pour l'affichage de l'inventaire
         private List<IItem> items;
+        public const int MaxQuantity = 30; 
+        private int currentCapacity; //Stockage actuel
         public Inventory()
         {
             ConsolePosition.X = 50;
@@ -24,7 +26,11 @@ namespace InventorySystem
 
         public void AddItem(IItem item)
         {
-            items.Add(item);
+            int availableSpace = MaxQuantity - currentCapacity;
+
+            if (items.Count + item.Quantity < MaxQuantity)
+                items.Add(item);
+
         }
 
         public void DisplayInventory()

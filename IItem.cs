@@ -11,8 +11,8 @@ namespace InventorySystem
     {
         
         string Name { get; }
-        string Description { get; }
-        int Prix { get; }
+        Category Category { get; }
+        int Price { get; }
         int Quantity { get; }
     }
 }

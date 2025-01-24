@@ -44,12 +44,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Category.cs" />
     <Compile Include="IItem.cs" />
-    <Compile Include="IRessouce.cs" />
+    <Compile Include="InventorySaveSystem.cs" />
+    <Compile Include="IResource.cs" />
     <Compile Include="Inventory.cs" />
     <Compile Include="Obj.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rarity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

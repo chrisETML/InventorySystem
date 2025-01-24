@@ -7,9 +7,11 @@ Description : Interface pour les ressources
 
 namespace InventorySystem
 {
-    internal interface IRessouce : IItem
+    internal interface IResource : IItem
     {
-         
-        
+        Rarity Rarity { get; }
+        int Weight { get; }
+
+        void Display();
     }
 }
