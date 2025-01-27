@@ -25,5 +25,9 @@ namespace InventorySystem
             Weight = weight;
             
         }
+        public void Display()
+        {
+
+        }
     }
 }

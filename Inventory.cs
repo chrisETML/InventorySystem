@@ -14,7 +14,7 @@ namespace InventorySystem
     internal class Inventory
     {
         private Vector2 ConsolePosition; //Position pour l'affichage de l'inventaire
-        private List<IItem> items;
+        public List<IItem> items {get; private set;}
         public const int MaxQuantity = 30; 
         private int currentCapacity; //Stockage actuel
         public Inventory()

@@ -14,7 +14,7 @@ namespace InventorySystem
 {
     internal class InventorySaveSystem
     {
-        public void SaveToCsv(List<IResource> items, string filePath)
+        public static void SaveToCsv(List<IItem> items, string filePath)
         {
             var csvContent = "Name,Quantity\n";  // Entête du CSV
 
@@ -27,8 +27,8 @@ namespace InventorySystem
             Console.WriteLine($"Inventaire sauvegardé dans le fichier CSV : {filePath}");
         }
 
-        
-        public List<IItem> LoadFromCsv(string filePath)
+
+        public static List<IItem> LoadFromCsv(string filePath)
         {
             var items = new List<IItem>();
 
@@ -42,7 +42,7 @@ namespace InventorySystem
                 var name = parts[0].Trim();
                 var quantity = int.Parse(parts[1].Trim());
 
-                items.Add(new Obj(name, quantity));
+                items.Add(new Obj(name, quantity, Rarity.Common, 10, 20));
             }
 
             Console.WriteLine($"Inventaire chargé depuis le fichier CSV : {filePath}");
