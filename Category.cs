@@ -5,12 +5,12 @@ Date : 24.01.2025
 Description : Liste de catégories possible pour les objets
 */
 
-namespace InventorySystem
+namespace WorldSystem
 {
     internal enum Category
     {
         Sword,
-        Ressource,
+        Resource,
         Shield
     }
 }
