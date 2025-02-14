@@ -21,12 +21,10 @@ namespace InventorySystem
 
             // Ajout des items dans la variable avant d'envoyer au CSV
             foreach (IItem item in items)
-            {
                 csvContent += item.ToCsvLine();
-            }
             
             File.WriteAllText(filePath, csvContent);
-            Console.SetCursorPosition((int)Inventory.ConsolePosition.X, (int)Inventory.ConsolePosition.Y + items.Count + ESPACE);
+            Console.SetCursorPosition((int)Inventory.Actualposition.X, (int)Inventory.Actualposition.Y + items.Count + ESPACE);
             Console.Write($"Inventaire sauvegardé");
         }
 
@@ -51,20 +49,21 @@ namespace InventorySystem
                             if (Enum.TryParse(parts[2].Trim(), out Material material))
                                 if (int.TryParse(parts[3].Trim(), out int price))
                                     if (int.TryParse(parts[4].Trim(), out int quantity))
+                                        //TODO constructeur Material() a donner a Resource!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                                         items.Add(new Resource(rarity, material, price, quantity));
                     }
                     else
                     {
-                        Console.SetCursorPosition((int)Inventory.ConsolePosition.X, (int)Inventory.ConsolePosition.Y + items.Count + ESPACE);
+                        Console.SetCursorPosition((int)Inventory.Actualposition.X, (int)Inventory.Actualposition.Y + items.Count + ESPACE);
                         Console.Write("                                                                                 ");
-                        Console.SetCursorPosition((int)Inventory.ConsolePosition.X, (int)Inventory.ConsolePosition.Y + items.Count + ESPACE);
+                        Console.SetCursorPosition((int)Inventory.Actualposition.X, (int)Inventory.Actualposition.Y + items.Count + ESPACE);
                         Console.Write($"Catégorie non reconnue: {category}");
                     }                        
                 }
             }
-            Console.SetCursorPosition((int)Inventory.ConsolePosition.X, (int)Inventory.ConsolePosition.Y + items.Count + ESPACE);
+            Console.SetCursorPosition((int)Inventory.Actualposition.X, (int)Inventory.Actualposition.Y + items.Count + ESPACE);
             Console.Write("                                                                                              ");
-            Console.SetCursorPosition((int)Inventory.ConsolePosition.X, (int)Inventory.ConsolePosition.Y + items.Count + ESPACE);
+            Console.SetCursorPosition((int)Inventory.Actualposition.X, (int)Inventory.Actualposition.Y + items.Count + ESPACE);
             Console.Write($"Inventaire chargé");
             return items;
         }

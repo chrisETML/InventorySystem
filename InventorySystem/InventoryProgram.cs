@@ -33,21 +33,23 @@ namespace InventorySystem
 
             Inventory inventory = new Inventory();
 
-            inventory.AddItem(new Resource(Rarity.Epic, Material.Gold, 10, 20));
+            inventory.AddItem(new Resource(Rarity.Epic, Material.Gold, 10, 1));
+            inventory.AddItem(new Resource(Rarity.Epic, Material.Wood, 12, 1));
+            inventory.AddItem(new Resource(Rarity.Epic, Material.Steel, 14, 2));
+            inventory.AddItem(new Resource(Rarity.Epic, Material.Gold, 10, 1));
 
             InventorySaveSystem.SaveToCsv(inventory.Items, $@"{Directory.GetCurrentDirectory()}\save");
             List<IItem> i = InventorySaveSystem.LoadFromCsv($@"{Directory.GetCurrentDirectory()}\save");
-            // Affichage de l'inventaire
+            
 
             foreach(IItem k in i)
             {
                 inventory.AddItem(k);
             }
 
-
             inventory.DisplayInventory();
+
             
-            // Attente de l'utilisateur pour fermer la console
             Console.ReadKey();
         }
     }
