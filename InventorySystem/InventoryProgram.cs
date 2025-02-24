@@ -38,8 +38,8 @@ namespace InventorySystem
             inventory.AddItem(new Resource(Rarity.Epic, Material.Steel, 14, 2));
             inventory.AddItem(new Resource(Rarity.Epic, Material.Gold, 10, 1));
 
-            InventorySaveSystem.SaveToCsv(inventory.Items, $@"{Directory.GetCurrentDirectory()}\save");
-            List<IItem> i = InventorySaveSystem.LoadFromCsv($@"{Directory.GetCurrentDirectory()}\save");
+            InventorySaveSystem.SaveToCsv(inventory.Items, $@"{Environment.CurrentDirectory}\save");
+            List<IItem> i = InventorySaveSystem.LoadFromCsv($@"{Environment.CurrentDirectory}\save");
             
 
             foreach(IItem k in i)
