@@ -86,7 +86,7 @@ namespace InventorySystem
 
                                 }
                     }
-                }                
+                }
                 else
                 {
                     Console.SetCursorPosition((int)Inventory.Actualposition.X, (int)Inventory.Actualposition.Y + items.Count + ESPACE);

@@ -39,8 +39,8 @@ namespace InventorySystem
             */
             //InventorySaveSystem.SaveToCsv(inventory.Items, $@"{Environment.CurrentDirectory}\saveInventory");
             List<IItem> i = InventorySaveSystem.LoadFromCsv($@"{Environment.CurrentDirectory}\saveInventory");
-            
-            foreach(IItem k in i)
+
+            foreach (IItem k in i)
             {
                 inventory.AddItem(k);
             }

@@ -50,7 +50,7 @@ namespace WorldSystem
                     break;
                 default:
                     break;
-            }            
+            }
         }
 
         public Sword(int Quantity, Rarity Rarity, Resource Resource, SwordName SwordName)
@@ -103,7 +103,7 @@ namespace WorldSystem
             {
                 Console.SetCursorPosition((int)Position.X, (int)Position.Y);
                 Console.Write("                                                                                           ");
-                Console.SetCursorPosition((int)Position.X,(int)Position.Y++);
+                Console.SetCursorPosition((int)Position.X, (int)Position.Y++);
                 Console.Write(item);
             }
 
