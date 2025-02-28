@@ -8,6 +8,7 @@ Description : Classe pour le système d'inventaire
 using System;
 using System.Collections.Generic;
 using System.Numerics;
+using System.Runtime.InteropServices.ComTypes;
 using WorldSystem;
 
 namespace InventorySystem
@@ -62,15 +63,18 @@ namespace InventorySystem
             }
         }
 
-        public object GetItemFromInventory(int itemNumber)
+        public IItem GetItemFromInventory(int itemNumber)
         {
             if (itemNumber >= 0 && itemNumber < Items.Count)
-                return Items[itemNumber];
-
+            {
+                IItem copyItem = Items[itemNumber];
+                RemoveItemFromInventory(itemNumber);
+                return copyItem;
+            }
             return null;
         }
 
-        public void RemoveItemFromInventory(int itemNumber)
+        private void RemoveItemFromInventory(int itemNumber)
         {
             if (itemNumber >= 0 && itemNumber < Items.Count)
                 Items.RemoveAt(itemNumber);
