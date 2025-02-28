@@ -19,12 +19,12 @@ namespace InventorySystem
         /// </summary>
         public static Vector2 Actualposition;
         public Vector2 DefaultPosition;
-        public List<IItem> Items {get; private set;}
-        public const int MaxCapacity = 30; 
+        public List<IItem> Items { get; private set;}
+        public const int MaxCapacity = 300; 
         private int currentCapacity;
         public Inventory()
         {
-            DefaultPosition.X = Actualposition.X = 160;
+            DefaultPosition.X = Actualposition.X = 140;
             DefaultPosition.Y = Actualposition.Y = 5;
             Items = new List<IItem>();
         }
@@ -34,11 +34,31 @@ namespace InventorySystem
             int availableSpace = MaxCapacity - currentCapacity;
 
             // Vérification si l'espace disponible est suffisant pour ajouter l'objet
-            if (item.Quantity <= availableSpace)
+
+            if (item is Resource resource)
             {
-                // Ajouter l'objet si l'espace est suffisant
-                Items.Add(item);
-                currentCapacity += item.Quantity;  // Mettre à jour la capacité actuelle
+                if (resource.TotalWeight <= availableSpace)
+                {
+                    // Ajouter l'objet si l'espace est suffisant
+                    Items.Add(item);
+                    currentCapacity += resource.TotalWeight;  // Mettre à jour la capacité actuelle
+                }
+            }                
+            else if (item is Sword sword)
+            {
+                if (sword.SwordWeight <= availableSpace)
+                {                    
+                    Items.Add(item);
+                    currentCapacity += sword.SwordWeight;
+                }
+            }                
+            else if (item is Shield shield)
+            {
+                if (shield.ShieldWeight <= availableSpace)
+                {
+                    Items.Add(item);
+                    currentCapacity += shield.ShieldWeight;
+                }
             }
         }
 
@@ -77,11 +97,11 @@ namespace InventorySystem
                 Console.SetCursorPosition((int)Actualposition.X, (int)++Actualposition.Y);
 
                 if(item is Resource resource)
-                    Console.WriteLine($"| n°{count} {resource.Material,-15} | x{item.Quantity,-4} |");
+                    Console.WriteLine($"| n°{count} {resource.Material.Name,-15} | x{resource.Quantity,-4} | {resource.TotalWeight} kg");
                 else if(item is Sword sword)
-                    Console.WriteLine($"| n°{count} {sword.Resource.Material,-15} | x{item.Quantity,-4} |");
+                    Console.WriteLine($"| n°{count} {sword.SwordName,-15} | x{sword.Quantity,-4} | {sword.SwordWeight} kg");
                 else if(item is Shield shield)
-                    Console.WriteLine($"| n°{count} {shield.Resource.Material,-15} | x{item.Quantity,-4} |");
+                    Console.WriteLine($"| n°{count} {shield.ShieldName,-15} | x{shield.Quantity,-4} | {shield.ShieldWeight} kg");
 
                 ++count;
             }

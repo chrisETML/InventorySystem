@@ -7,7 +7,7 @@ Description : Programme principale pour le système d'inventaire
 
 using System;
 using System.Collections.Generic;
-using System.IO;
+using static WorldSystem.Material_List;
 using System.Runtime.InteropServices;
 using WorldSystem;
 
@@ -33,23 +33,18 @@ namespace InventorySystem
 
             Inventory inventory = new Inventory();
 
-            inventory.AddItem(new Resource(2, new Material("gold", 3,10), Rarity.Rare));
-            inventory.AddItem(new Resource(2, new Material("gold", 2, 10), Rarity.Common));
-            inventory.AddItem(new Resource(3, new Material("gold", 3, 10), Rarity.Legendary));
-            inventory.AddItem(new Resource(4, new Material("gold", 4, 10), Rarity.Uncommon));
-
-            InventorySaveSystem.SaveToCsv(inventory.Items, $@"{Environment.CurrentDirectory}\save");
-            List<IItem> i = InventorySaveSystem.LoadFromCsv($@"{Environment.CurrentDirectory}\save");
+            /*inventory.AddItem(new Resource(2, new Material("gold", 3, 10), Rarity.Rare));
+            inventory.AddItem(new Sword(1, Rarity.Epic, new Resource(2, new Material(Materials[6].Name, Materials[6].Weight, 10), Rarity.Rare)));
+            */
+            //InventorySaveSystem.SaveToCsv(inventory.Items, $@"{Environment.CurrentDirectory}\saveInventory");
+            List<IItem> i = InventorySaveSystem.LoadFromCsv($@"{Environment.CurrentDirectory}\saveInventory");
             
-
             foreach(IItem k in i)
             {
                 inventory.AddItem(k);
             }
 
             inventory.DisplayInventory();
-
-            
             Console.ReadKey();
         }
     }
