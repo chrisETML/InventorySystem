@@ -7,6 +7,7 @@ Description : Programme principale pour le système d'inventaire
 
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Runtime.InteropServices;
 using WorldSystem;
 
@@ -26,6 +27,8 @@ namespace InventorySystem
         static void Main()
         {
             IntPtr hWnd = GetConsoleWindow();
+
+            // Maximiser la fenêtre
             ShowWindow(hWnd, SW_MAXIMIZE);
 
             Inventory inventory = new Inventory();
@@ -45,9 +48,9 @@ namespace InventorySystem
             }
 
             inventory.DisplayInventory();
-            inventory.GetItemFromInventory(2);
+
             
-            Console.ReadLine();
+            Console.ReadKey();
         }
     }
 }
