@@ -8,7 +8,7 @@ using System;
 using System.Numerics;
 namespace WorldSystem
 {
-    internal class Shield : IShield
+    internal sealed class Shield : IShield
     {
         public Rarity Rarity { get; private set; }
         public Category Category { get; private set; } = Category.Shield;

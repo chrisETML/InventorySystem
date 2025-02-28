@@ -8,12 +8,11 @@ Description : Classe pour le système d'inventaire
 using System;
 using System.Collections.Generic;
 using System.Numerics;
-using System.Runtime.InteropServices.ComTypes;
 using WorldSystem;
 
 namespace InventorySystem
 {
-    internal class Inventory
+    internal sealed class Inventory
     {
         /// <summary>
         ///Position pour l'affichage de l'inventaire
@@ -117,6 +116,16 @@ namespace InventorySystem
         private void RefreshInventory()
         {
             Actualposition = DefaultPosition;
+            Console.SetCursorPosition((int)Actualposition.X, (int)++Actualposition.Y);
+            Console.WriteLine("                                                         ");
+            Console.SetCursorPosition((int)Actualposition.X, (int)++Actualposition.Y);
+            Console.WriteLine("                                                         ");
+            Console.SetCursorPosition((int)Actualposition.X, (int)++Actualposition.Y);
+            Console.WriteLine("                                                         ");
+            Console.SetCursorPosition((int)Actualposition.X, (int)++Actualposition.Y);
+            Console.WriteLine("                                                         ");
+            Console.SetCursorPosition((int)Actualposition.X, (int)++Actualposition.Y);
+            Console.WriteLine("                                                         ");
             Console.SetCursorPosition((int)Actualposition.X, (int)++Actualposition.Y);
             Console.WriteLine("                                                         ");
             Console.SetCursorPosition((int)Actualposition.X, (int)++Actualposition.Y);

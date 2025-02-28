@@ -8,7 +8,7 @@ using System;
 using System.Numerics;
 namespace WorldSystem
 {
-    internal class Resource : IResource
+    internal sealed class Resource : IResource
     {
         public Rarity Rarity { get; private set; }
         public Category Category { get; private set; } = Category.Resource;
