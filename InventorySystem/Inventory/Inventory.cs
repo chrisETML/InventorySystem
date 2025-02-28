@@ -44,6 +44,8 @@ namespace InventorySystem
 
         public object GetItemFromInventory(int itemNumber)
         {
+            Console.SetCursorPosition((int)Actualposition.X, (int)Actualposition.Y + 1);
+            Console.Write("N° item à récupérer : ");
             if (itemNumber >= 0 && itemNumber < Items.Count)
                 return Items[itemNumber];
 
@@ -72,10 +74,10 @@ namespace InventorySystem
 
             // Affichage des items avec une taille d'affichage pour chaque colonne
             uint count = 0;
-            foreach (var item in Items)
+            foreach (IItem item in Items)
             {
                 Console.SetCursorPosition((int)Actualposition.X, (int)++Actualposition.Y);
-                Console.WriteLine($"| n°{count} {item.Material,-15} | x{item.Quantity,-10} |");
+                Console.WriteLine($"| n°{count} {item.Material,-15} | x{item.Quantity,-4} |");
                 ++count;
             }
             Console.SetCursorPosition((int)Actualposition.X, (int)++Actualposition.Y);
