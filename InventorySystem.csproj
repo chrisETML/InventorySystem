@@ -44,18 +44,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Category.cs" />
+    <Compile Include="enum&amp;Struct\Category.cs" />
+    <Compile Include="enum&amp;Struct\Material.cs" />
+    <Compile Include="enum&amp;Struct\Material_List.cs" />
+    <Compile Include="enum&amp;Struct\Rarity.cs" />
     <Compile Include="IItem.cs" />
     <Compile Include="InventorySystem\Inventory\InventorySaveSystem.cs" />
-    <Compile Include="IResource.cs" />
     <Compile Include="InventorySystem\Inventory\Inventory.cs" />
-    <Compile Include="ISword.cs" />
-    <Compile Include="Material.cs" />
     <Compile Include="InventorySystem\InventoryProgram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rarity.cs" />
-    <Compile Include="Resource.cs" />
-    <Compile Include="Sword.cs" />
+    <Compile Include="Resource\IResource.cs" />
+    <Compile Include="Resource\Resource.cs" />
+    <Compile Include="Shield\IShield.cs" />
+    <Compile Include="Shield\Shield.cs" />
+    <Compile Include="Shield\ShieldName.cs" />
+    <Compile Include="Sword\ISword.cs" />
+    <Compile Include="Sword\Sword.cs" />
+    <Compile Include="Sword\SwordName.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System;
 using System.IO;
 using WorldSystem;
+using static WorldSystem.Material_List;
 
 namespace InventorySystem
 {
@@ -46,11 +47,21 @@ namespace InventorySystem
                     if (category == Category.Resource)
                     {
                         if (Enum.TryParse(parts[1].Trim(), out Rarity rarity))
-                            if (Enum.TryParse(parts[2].Trim(), out Material material))
-                                if (int.TryParse(parts[3].Trim(), out int price))
-                                    if (int.TryParse(parts[4].Trim(), out int quantity))
-                                        //TODO constructeur Material() a donner a Resource!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                                        items.Add(new Resource(rarity, material, price, quantity));
+                            if (int.TryParse(parts[3].Trim(), out int price))
+                                  if (int.TryParse(parts[4].Trim(), out int weight))
+                                        if (int.TryParse(parts[5].Trim(), out int quantity))
+                                        {
+                                            
+                                            //TODO constructeur Material() a donner a Resource!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                                            foreach (Material newMaterial in Materials)
+                                            {
+
+                                                if(newMaterial.Name == parts[2].Trim())
+                                                    items.Add(new Resource(quantity, newMaterial, Rarity.Rare));
+                                            }
+                                        
+                                        }
+                                       
                     }
                     else
                     {

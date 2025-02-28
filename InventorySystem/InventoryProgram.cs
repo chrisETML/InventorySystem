@@ -33,10 +33,10 @@ namespace InventorySystem
 
             Inventory inventory = new Inventory();
 
-            inventory.AddItem(new Resource(Rarity.Epic, Material.Gold, 10, 1));
-            inventory.AddItem(new Resource(Rarity.Epic, Material.Wood, 12, 1));
-            inventory.AddItem(new Resource(Rarity.Epic, Material.Steel, 14, 2));
-            inventory.AddItem(new Resource(Rarity.Epic, Material.Gold, 10, 1));
+            inventory.AddItem(new Resource(2, new Material("gold", 3,10), Rarity.Rare));
+            inventory.AddItem(new Resource(2, new Material("gold", 2, 10), Rarity.Common));
+            inventory.AddItem(new Resource(3, new Material("gold", 3, 10), Rarity.Legendary));
+            inventory.AddItem(new Resource(4, new Material("gold", 4, 10), Rarity.Uncommon));
 
             InventorySaveSystem.SaveToCsv(inventory.Items, $@"{Environment.CurrentDirectory}\save");
             List<IItem> i = InventorySaveSystem.LoadFromCsv($@"{Environment.CurrentDirectory}\save");

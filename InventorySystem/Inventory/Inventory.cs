@@ -72,10 +72,17 @@ namespace InventorySystem
 
             // Affichage des items avec une taille d'affichage pour chaque colonne
             uint count = 0;
-            foreach (var item in Items)
+            foreach (IItem item in Items)
             {
                 Console.SetCursorPosition((int)Actualposition.X, (int)++Actualposition.Y);
-                Console.WriteLine($"| n°{count} {item.Material,-15} | x{item.Quantity,-10} |");
+
+                if(item is Resource resource)
+                    Console.WriteLine($"| n°{count} {resource.Material,-15} | x{item.Quantity,-4} |");
+                else if(item is Sword sword)
+                    Console.WriteLine($"| n°{count} {sword.Resource.Material,-15} | x{item.Quantity,-4} |");
+                else if(item is Shield shield)
+                    Console.WriteLine($"| n°{count} {shield.Resource.Material,-15} | x{item.Quantity,-4} |");
+
                 ++count;
             }
             Console.SetCursorPosition((int)Actualposition.X, (int)++Actualposition.Y);
