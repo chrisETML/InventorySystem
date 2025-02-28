@@ -71,12 +71,22 @@ namespace InventorySystem
 
                                 }
                     }
-                }
-                // Si la catégorie est "Shield", créer un objet Shield
-                else if (category == Category.Shield)
-                {
+                    // Si la catégorie est "Shield", créer un objet Shield
+                    else if (category == Category.Shield)
+                    {
+                        if (Enum.TryParse(parts[1].Trim(), out Rarity rarity))
+                            if (Enum.TryParse(parts[2].Trim(), out ShieldName shieldName))
+                                if (int.TryParse(parts[4].Trim(), out int quantity))
+                                {
+                                    foreach (Material newMaterial in Materials)
+                                    {
+                                        if (newMaterial.Name == parts[3].Trim())
+                                            items.Add(new Shield(quantity, new Resource(quantity, newMaterial, Rarity.Rare), rarity, shieldName));
+                                    }
 
-                }
+                                }
+                    }
+                }                
                 else
                 {
                     Console.SetCursorPosition((int)Inventory.Actualposition.X, (int)Inventory.Actualposition.Y + items.Count + ESPACE);

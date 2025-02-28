@@ -35,6 +35,7 @@ namespace InventorySystem
 
             /*inventory.AddItem(new Resource(2, new Material("gold", 3, 10), Rarity.Rare));
             inventory.AddItem(new Sword(1, Rarity.Epic, new Resource(2, new Material(Materials[6].Name, Materials[6].Weight, 10), Rarity.Rare)));
+            inventory.AddItem(new Shield(1, new Resource(2, new Material(Materials[3].Name, Materials[3].Weight, 10), Rarity.Legendary), Rarity.Legendary, ShieldName.The_Shield_of_the_Eternal_Champion));
             */
             //InventorySaveSystem.SaveToCsv(inventory.Items, $@"{Environment.CurrentDirectory}\saveInventory");
             List<IItem> i = InventorySaveSystem.LoadFromCsv($@"{Environment.CurrentDirectory}\saveInventory");

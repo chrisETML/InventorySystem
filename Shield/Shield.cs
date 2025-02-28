@@ -53,6 +53,40 @@ namespace WorldSystem
             }
         }
 
+        public Shield(int Quantity, Resource Resource, Rarity Rarity, ShieldName ShieldName)
+        {
+            this.ShieldName = ShieldName;
+            this.Quantity = Quantity;
+            this.Resource = Resource;
+            this.Rarity = Rarity;
+            ShieldWeight += Resource.Material.Weight;
+            switch (ShieldName)
+            {
+                case ShieldName.Banner_of_the_Fallen:
+                    ShieldPrice = 10000;
+                    ShieldProtection = 1;
+                    break;
+                case ShieldName.Bulwark_of_Azzinoth:
+                    ShieldPrice = 1000;
+                    ShieldProtection = 2;
+                    break;
+                case ShieldName.Shield_of_the_Righteous:
+                    ShieldPrice = 8000;
+                    ShieldProtection = 3;
+                    break;
+                case ShieldName.Aegis_of_the_Scarlet_Crusade:
+                    ShieldPrice = 7000;
+                    ShieldProtection = 5;
+                    break;
+                case ShieldName.The_Shield_of_the_Eternal_Champion:
+                    ShieldPrice = 5000;
+                    ShieldProtection = 6;
+                    break;
+                default:
+                    break;
+            }
+        }
+
         public void Display(Vector2 Position, Vector2 InputPosition, int worldItems)
         {
             string[] str = {
@@ -87,7 +121,7 @@ namespace WorldSystem
         }
         public string ToCsvLine()
         {
-            return $"{Category},{Rarity},{ShieldName},{ShieldPrice},{Resource.Material.Name},{Resource.Material.Price},{Resource.Material.Weight},{Quantity},{ShieldProtection}";
+            return $"{Category},{Rarity},{ShieldName},{Resource.Material.Name},{Quantity}";
         }
     }
 }

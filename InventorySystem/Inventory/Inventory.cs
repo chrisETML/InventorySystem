@@ -85,10 +85,10 @@ namespace InventorySystem
 
             // Affiche l'inventaire
             Console.Write($"Inventaire : ");
-            Console.Write($"Poids {currentCapacity}/{MaxCapacity}");
+            Console.Write($"Poids {currentCapacity}/{MaxCapacity} kg");
 
             Console.SetCursorPosition((int)Actualposition.X, (int)++Actualposition.Y);
-            Console.WriteLine("------------------------------------------------");
+            Console.WriteLine("---------------------------------------------------------");
 
             // Affichage des items avec une taille d'affichage pour chaque colonne
             uint count = 0;
@@ -106,7 +106,7 @@ namespace InventorySystem
                 ++count;
             }
             Console.SetCursorPosition((int)Actualposition.X, (int)++Actualposition.Y);
-            Console.WriteLine("------------------------------------------------");
+            Console.WriteLine("---------------------------------------------------------");
             Console.ResetColor();
         }
 
