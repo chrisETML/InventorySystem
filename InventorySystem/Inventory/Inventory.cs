@@ -166,6 +166,8 @@ namespace InventorySystem
         {
             Console.SetCursorPosition((int)inputPosition.X, (int)inputPosition.Y);
             Console.Write("                                                                                           ");
+            Console.SetCursorPosition((int)inputPosition.X, (int)inputPosition.Y + 1);
+            Console.Write("                                                                                           ");
             Console.SetCursorPosition((int)inputPosition.X, (int)inputPosition.Y);
             Console.Write("Sauvegarder inventaire (y,n) : ");
             string input = Console.ReadLine();
@@ -188,6 +190,8 @@ namespace InventorySystem
         public void Load(Vector2 inputPosition)
         {
             Console.SetCursorPosition((int)inputPosition.X, (int)inputPosition.Y);
+            Console.Write("                                                                                           ");
+            Console.SetCursorPosition((int)inputPosition.X, (int)inputPosition.Y + 1);
             Console.Write("                                                                                           ");
             Console.SetCursorPosition((int)inputPosition.X, (int)inputPosition.Y);
             Console.Write("Charger inventaire (y,n) : ");
@@ -262,45 +266,19 @@ namespace InventorySystem
                 ++count;
             }
             Console.SetCursorPosition((int)Actualposition.X, (int)++Actualposition.Y);
-            Console.WriteLine("----------------------------------------------------------------------");
+            Console.Write("----------------------------------------------------------------------");
             Console.ResetColor();
         }
 
         private void RefreshInventory()
         {
             Actualposition = DefaultPosition;
-            Console.SetCursorPosition((int)Actualposition.X, (int)++Actualposition.Y);
-            Console.WriteLine("                                                         ");
-            Console.SetCursorPosition((int)Actualposition.X, (int)++Actualposition.Y);
-            Console.WriteLine("                                                         ");
-            Console.SetCursorPosition((int)Actualposition.X, (int)++Actualposition.Y);
-            Console.WriteLine("                                                         ");
-            Console.SetCursorPosition((int)Actualposition.X, (int)++Actualposition.Y);
-            Console.WriteLine("                                                         ");
-            Console.SetCursorPosition((int)Actualposition.X, (int)++Actualposition.Y);
-            Console.WriteLine("                                                         ");
-            Console.SetCursorPosition((int)Actualposition.X, (int)++Actualposition.Y);
-            Console.WriteLine("                                                         ");
-            Console.SetCursorPosition((int)Actualposition.X, (int)++Actualposition.Y);
-            Console.WriteLine("                                                         ");
-            Console.SetCursorPosition((int)Actualposition.X, (int)++Actualposition.Y);
-            Console.WriteLine("                                                         ");
-            Console.SetCursorPosition((int)Actualposition.X, (int)++Actualposition.Y);
-            Console.WriteLine("                                                         ");
-            Console.SetCursorPosition((int)Actualposition.X, (int)++Actualposition.Y);
-            Console.WriteLine("                                                         ");
-            Console.SetCursorPosition((int)Actualposition.X, (int)++Actualposition.Y);
-            Console.WriteLine("                                                         ");
-            Console.SetCursorPosition((int)Actualposition.X, (int)++Actualposition.Y);
-            Console.WriteLine("                                                         ");
-            Console.SetCursorPosition((int)Actualposition.X, (int)++Actualposition.Y);
-            Console.WriteLine("                                                         ");
-            Console.SetCursorPosition((int)Actualposition.X, (int)++Actualposition.Y);
-            Console.WriteLine("                                                         ");
-            Console.SetCursorPosition((int)Actualposition.X, (int)++Actualposition.Y);
-            Console.WriteLine("                                                         ");
-            Console.SetCursorPosition((int)Actualposition.X, (int)++Actualposition.Y);
-            Console.WriteLine("                                                         ");
+
+            for (int i = 0; i < Items.Count + 3; ++i)
+            {
+                Console.SetCursorPosition((int)Actualposition.X, (int)++Actualposition.Y);
+                Console.Write("                                                                       ");
+            }
             Actualposition = DefaultPosition;
         }
     }

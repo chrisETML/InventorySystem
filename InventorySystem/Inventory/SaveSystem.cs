@@ -18,7 +18,7 @@ namespace InventorySystem
         private const Byte ESPACE = 5;
         public static void SaveToCsv(List<IItem> items, string filePath)
         {
-            string csvContent = "";
+            string csvContent = string.Empty;
 
             // Ajout des items dans la variable avant d'envoyer au CSV
             foreach (IItem item in items)
@@ -114,7 +114,7 @@ namespace InventorySystem
                 return;
             }
 
-            string csvContent = "";
+            string csvContent = string.Empty;
 
             // Iterate through the items in the list and ensure none of them are null
             foreach (IItem item in items)

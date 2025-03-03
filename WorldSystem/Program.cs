@@ -26,12 +26,12 @@ namespace WorldSystem
 
         // Constantes utilisées pour manipuler la fenêtre
         const int SW_MAXIMIZE = 3;
-        static Vector2 GroundPosition = new Vector2(10, 40);
-        static Vector2 InputPosition = new Vector2(GroundPosition.X, GroundPosition.Y + 2);
-        static Inventory inventory = new Inventory();
+        static Vector2   GroundPosition = new Vector2(10, 40);
+        static Vector2   InputPosition  = new Vector2(GroundPosition.X, GroundPosition.Y + 2);
+        static Inventory inventory      = new Inventory();
 
         static Random random = new Random();
-        static Array rarity = Enum.GetValues(typeof(Rarity));
+        static Array  rarity = Enum.GetValues(typeof(Rarity));
 
         public static List<IItem> worldItems = new List<IItem>()
         {
@@ -51,13 +51,15 @@ namespace WorldSystem
             new Shield  (Quantity:random.Next(1, 10), Rarity:(Rarity)rarity.GetValue(random.Next(rarity.Length)), Resource:new Resource(Quantity:1, Material:Materials[random.Next(Materials.Count)], Rarity:(Rarity)rarity.GetValue(random.Next(rarity.Length)))),
             null,
             null,
+            null,
+            null,
+            null,
             null
         };
-        static void Main(string[] args)
+        static void Main()
         {
-
             Console.ReadLine();
-            Vector2 ItemsPosition = GroundPosition;
+            Vector2 ItemsPosition   = GroundPosition;
             Vector2 DisplayPosition = new Vector2(2, 2);
             IntPtr hWnd = GetConsoleWindow();
 
@@ -209,19 +211,15 @@ namespace WorldSystem
                 if (item != null)
                 {
                     Console.ForegroundColor = ColorItem(item);
-
                     Console.Write($" {RetourneChar(item)}  ");
-
                     Console.ResetColor();
                 }
-
                 else
                 {
                     Console.Write(" ");
                 }
 
                 Console.SetCursorPosition((int)(ItemsPosition.X), (int)GroundPosition.Y - 2);
-
                 Console.Write($" {counter++} ");
             }
         }
