@@ -12,8 +12,8 @@ namespace WorldSystem
     {
         public Rarity Rarity { get; private set; }
         public Category Category { get; private set; } = Category.Resource;
-        public int Quantity { get; private set; }
-        public int TotalWeight { get; private set; }
+        public int Quantity { get; set; }
+        public int TotalWeight { get; set; }
         public Material Material { get; private set; }
 
         public Resource(int Quantity, Material Material, Rarity Rarity)
@@ -31,7 +31,9 @@ namespace WorldSystem
                 $@"Quantity: {Quantity}",
                 $@"MaterialName: {Material.Name}",
                 $@"MaterialPrice {Material.Price}",
-                $@"MaterialWeight {Material.Weight}"+"\n"
+                $@"MaterialWeight {Material.Weight}"+"\n",
+                $@"                                "+ "\n",
+                $@"                                "+ "\n"
             };
             foreach (string item in str)
             {

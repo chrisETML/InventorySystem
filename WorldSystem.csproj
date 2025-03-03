@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B9863439-A760-4387-91D9-7ED639070423}</ProjectGuid>
+    <ProjectGuid>{C2AFB0EA-053E-4554-BA47-2D660639DAC0}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>InventorySystem</RootNamespace>
-    <AssemblyName>InventorySystem</AssemblyName>
+    <RootNamespace>WorldSystem</RootNamespace>
+    <AssemblyName>WorldSystem</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -44,26 +44,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="enum&amp;Struct\Category.cs" />
-    <Compile Include="enum&amp;Struct\Material.cs" />
-    <Compile Include="enum&amp;Struct\Material_List.cs" />
-    <Compile Include="enum&amp;Struct\Rarity.cs" />
-    <Compile Include="IItem.cs" />
-    <Compile Include="InventorySystem\Inventory\InventorySaveSystem.cs" />
     <Compile Include="InventorySystem\Inventory\Inventory.cs" />
-    <Compile Include="InventorySystem\InventoryProgram.cs" />
+    <Compile Include="InventorySystem\Inventory\SaveSystem.cs" />
+    <Compile Include="WorldSystem\enum&amp;Struct\Material_List.cs" />
+    <Compile Include="WorldSystem\enum&amp;Struct\Material.cs" />
+    <Compile Include="WorldSystem\enum&amp;Struct\Category.cs" />
+    <Compile Include="WorldSystem\IItem.cs" />
+    <Compile Include="WorldSystem\Resource\IResource.cs" />
+    <Compile Include="WorldSystem\Shield\IShield.cs" />
+    <Compile Include="WorldSystem\Shield\Shield.cs" />
+    <Compile Include="WorldSystem\Shield\ShieldName.cs" />
+    <Compile Include="WorldSystem\Sword\ISword.cs" />
+    <Compile Include="WorldSystem\enum&amp;Struct\Rarity.cs" />
+    <Compile Include="WorldSystem\Resource\Resource.cs" />
+    <Compile Include="WorldSystem\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resource\IResource.cs" />
-    <Compile Include="Resource\Resource.cs" />
-    <Compile Include="Shield\IShield.cs" />
-    <Compile Include="Shield\Shield.cs" />
-    <Compile Include="Shield\ShieldName.cs" />
-    <Compile Include="Sword\ISword.cs" />
-    <Compile Include="Sword\Sword.cs" />
-    <Compile Include="Sword\SwordName.cs" />
+    <Compile Include="WorldSystem\Sword\Sword.cs" />
+    <Compile Include="WorldSystem\Sword\SwordName.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
