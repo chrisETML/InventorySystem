@@ -278,7 +278,10 @@ namespace WorldSystem
         {
             if (worldItems == null || worldItems.Count == 0)
             {
-                Console.WriteLine("No world items to save.");
+                Console.SetCursorPosition((int)inputPosition.X, (int)inputPosition.Y + 1);
+                Console.Write("                                                                                           ");
+                Console.SetCursorPosition((int)inputPosition.X, (int)inputPosition.Y + 1);
+                Console.Write("No world items to save.");
                 return;
             }
 
@@ -305,7 +308,8 @@ namespace WorldSystem
                 SaveSystem.SaveToCsv4(worldItems, filePath);
 
                 // Provide confirmation
-
+                Console.SetCursorPosition((int)inputPosition.X, (int)inputPosition.Y);
+                Console.Write("                                                                                           ");
                 Console.SetCursorPosition((int)inputPosition.X, (int)inputPosition.Y + 1);
                 Console.Write($"World items sauvegardé");
             }

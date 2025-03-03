@@ -11,7 +11,6 @@ using System.Linq;
 using System.Numerics;
 using WorldSystem;
 
-
 namespace InventorySystem
 {
     internal sealed class Inventory
