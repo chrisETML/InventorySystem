@@ -11,6 +11,7 @@ using System.Linq;
 using System.Numerics;
 using WorldSystem;
 
+
 namespace InventorySystem
 {
     internal sealed class Inventory
@@ -200,7 +201,7 @@ namespace InventorySystem
                 Console.SetCursorPosition((int)inputPosition.X, (int)inputPosition.Y);
                 Console.Write("Nom du fichier : ");
                 input = Console.ReadLine();
-                
+
                 foreach (IItem item in SaveSystem.LoadFromCsv($@"{Environment.CurrentDirectory}\{input}"))
                 {
                     AddItem(item, inputPosition, false);
