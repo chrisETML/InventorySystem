@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="InventorySystem.Inventory" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACgIIAAAAECAAAAAAQAAgAgAAAAQAAIAAAAIAAAAA=</HashCode>
+      <FileName>InventorySystem\Inventory\Inventory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventorySystem.SaveSystem" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAIAAAAAAEAAAAAAAAAAABA=</HashCode>
+      <FileName>InventorySystem\Inventory\SaveSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WorldSystem.Material_List" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WorldSystem\enum&amp;Struct\Material_List.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WorldSystem.Program" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAABAAAAAAAAgAACCEQAJCBgDAA=</HashCode>
+      <FileName>WorldSystem\Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WorldSystem.Resource" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAQAAAAgAQAAAEAAAgAAACAA=</HashCode>
+      <FileName>WorldSystem\Resource\Resource.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WorldSystem.Shield" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAEAAQAAAAAAAQEAAAgCQAAAAAAAgAAADAA=</HashCode>
+      <FileName>WorldSystem\Shield\Shield.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WorldSystem.Sword" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAIAABAAAAAAAAAQAAAAgAQAAAAAEAgBAADAA=</HashCode>
+      <FileName>WorldSystem\Sword\Sword.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Struct Name="WorldSystem.Material" Collapsed="true">
+    <Position X="7.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAQAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WorldSystem\enum&amp;Struct\Material.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="WorldSystem.IItem" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAQAAAAAAAgAAACAA=</HashCode>
+      <FileName>WorldSystem\IItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="WorldSystem.IResource" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>WorldSystem\Resource\IResource.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="WorldSystem.IShield" Collapsed="true">
+    <Position X="5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAEAAAAAAAAAAQAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WorldSystem\Shield\IShield.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="WorldSystem.ISword" Collapsed="true">
+    <Position X="2.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAABAAAAAAAAAQAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>WorldSystem\Sword\ISword.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="WorldSystem.Category">
+    <Position X="7.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAEAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WorldSystem\enum&amp;Struct\Category.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="WorldSystem.Rarity">
+    <Position X="9.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAQAAAAAAAAAQAAAAAAAQAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WorldSystem\enum&amp;Struct\Rarity.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="WorldSystem.ShieldName">
+    <Position X="11" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAgAAAAAAAAAAAAAAgAAAIAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WorldSystem\Shield\ShieldName.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="WorldSystem.SwordName">
+    <Position X="5.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAIIAAAAAAAAAAAAAgAAQAAAAAAA=</HashCode>
+      <FileName>WorldSystem\Sword\SwordName.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

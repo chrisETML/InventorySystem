@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace WorldSystem
 {
-    internal class Material_List
+    internal sealed class Material_List
     {
         public static List<Material> Materials = new List<Material>()
         {
