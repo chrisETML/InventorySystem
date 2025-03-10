@@ -29,7 +29,7 @@ namespace InventorySystem
             DefaultPosition.Y = Actualposition.Y = 5;
             Items = new List<IItem>();
         }
-
+        
         public void AddItem(IItem item, Vector2 inputPosition, bool inputUsage)
         {
             int availableSpace = MaxCapacity - currentCapacity;
